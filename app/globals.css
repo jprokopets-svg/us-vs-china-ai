@@ -2,26 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Force dark background throughout — no light mode flicker */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #030712;
+  --foreground: #f9fafb;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
 }
 
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* Recharts SVG text inherits dark background context correctly */
+.recharts-cartesian-axis-tick-value {
+  fill: #9ca3af;
+}
+
+/* Ensure charts don't overflow on small screens */
+.recharts-responsive-container {
+  max-width: 100%;
 }

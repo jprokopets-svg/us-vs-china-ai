@@ -1,0 +1,5 @@
+# Don't deploy these to Vercel
+.git
+node_modules
+*.log
+.DS_Store
