@@ -1,6 +1,3 @@
-// Main page: assembles all sections in order.
-// This is a static page — no server-side data fetching, no client state at this level.
-
 import Hero from "@/components/Hero";
 import ComputePanel from "@/components/ComputePanel";
 import CapabilityPanel from "@/components/CapabilityPanel";
@@ -10,12 +7,18 @@ import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main>
+    // Single centered column, max 720px, with horizontal padding for small screens
+    <main className="max-w-[720px] mx-auto px-6">
       <Hero />
+      <hr className="border-gray-200" />
       <ComputePanel />
+      <hr className="border-gray-200" />
       <CapabilityPanel />
+      <hr className="border-gray-200" />
       <CapexPanel />
+      <hr className="border-gray-200" />
       <Methodology />
+      <hr className="border-gray-200" />
       <Footer />
     </main>
   );

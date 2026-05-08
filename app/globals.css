@@ -2,10 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Force dark background throughout — no light mode flicker */
 :root {
-  --background: #030712;
-  --foreground: #f9fafb;
+  --background: #ffffff;
+  --foreground: #111111;
 }
 
 html {
@@ -13,18 +12,11 @@ html {
 }
 
 body {
+  font-family: Georgia, "Times New Roman", Times, serif;
   color: var(--foreground);
   background: var(--background);
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-/* Recharts SVG text inherits dark background context correctly */
-.recharts-cartesian-axis-tick-value {
-  fill: #9ca3af;
-}
-
-/* Ensure charts don't overflow on small screens */
-.recharts-responsive-container {
-  max-width: 100%;
-}
+/* Recharts text uses SVG, which doesn't inherit CSS font-family automatically.
+   We set it per-element via the tick prop in each chart component. */
