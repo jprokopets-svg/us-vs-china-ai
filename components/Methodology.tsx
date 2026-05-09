@@ -34,6 +34,18 @@ export default function Methodology() {
           </p>
         </div>
 
+        <div>
+          <p className="font-normal text-black mb-1">Productivity</p>
+          <p>
+            Projections are linear extrapolations from published range estimates: BCG/McKinsey
+            (3.0pp by 2030), Goldman Sachs Top of Mind (1.75pp), and Bick, Blandin & Deming NBER
+            WP 2024/2026 (1.0pp). The realized data point is from BLS Multifactor Productivity
+            series; the AI-attributable portion is estimated, not directly measured, and is within
+            the statistical noise band. The $1.6T investment figure aggregates CB Insights and
+            Stanford AI Index annual investment data from 2013–2025.
+          </p>
+        </div>
+
         <div className="pt-4 flex flex-wrap gap-x-6 gap-y-2 text-xs text-gray-400">
           <a href="https://github.com/jprokopets-svg/us-vs-china-ai" className="underline underline-offset-2 hover:text-black transition-colors">
             Source on GitHub
